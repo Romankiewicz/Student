@@ -1,4 +1,4 @@
-package de.iav.model;
+package de.iav.simpsons.model;
 
 public class Simpson {
     private int age;

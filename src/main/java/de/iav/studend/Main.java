@@ -1,25 +1,49 @@
 package de.iav.studend;
 
-import de.iav.studend.model.ComputerScienceStudent;
-import de.iav.studend.model.Student;
-import de.iav.studend.model.StudentDB;
+import de.iav.studend.model.*;
 
-import java.util.Arrays;
-
-public class Main1 {
+public class Main {
 
     public static void main(String[] args) {
 
-       /* Student joerg = new Student("Jörg", 123456);
-        Student jessie = new Student("Jessie", 654321);
-        Student steve = new Student("Steve", 5964);*/
-        ComputerScienceStudent frank = new ComputerScienceStudent("Frank", 38388, true);
+        Student max = new BiologyStudent("Biology Class");
+        max.setId("1234");
+        max.setName("Max Pain");
+        max.setActiveStudent(true);
+        max.setAge(58);
 
-        System.out.println(frank);
-        System.out.println(frank.getCourse());
+        Student neo = new ComputerScienceStudent("Computer Science Class");
+        neo.setId("4567");
+        neo.setName("Thomas 'Neo' Anderson");
+        neo.setAge(37);
+        neo.setActiveStudent(true);
 
-       /* Student[] students = {joerg, jessie, steve, frank};
-        StudentDB studentDB = new StudentDB(students);*/
+        Student nathan = new ArcheologyStudent("Archeology Class");
+        nathan.setId("2345");
+        nathan.setName("Nathan Drake");
+        nathan.setAge(40);
+        nathan.setActiveStudent(true);
+
+        Student indy = new ArcheologyStudent("Archeology Class");
+        indy.setId("3456");
+        indy.setName("Henry Walton 'Indiana, Indy' Johnes jr.");
+        indy.setAge(124);
+        indy.setActiveStudent(false);
+        ((ArcheologyStudent) indy).setCardNumber(01);
+        ((ArcheologyStudent)indy).setAdress("Chicago");
+
+        ComputerScienceStudent morpheus = new ComputerScienceStudent();
+        morpheus.setName("Morpheus");
+        morpheus.setAdress("Zion");
+
+
+
+
+        System.out.println(max);
+        System.out.println(indy);
+        System.out.println(nathan);
+        System.out.println(neo);
+        System.out.println(morpheus);
 
     }
 }

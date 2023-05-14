@@ -1,2 +1,5 @@
-package de.iav.studend;public class StudentIdNotFound {
-}
+package de.iav.studend.model;
+
+//public class StudentIdNotFoundException extends Exception() {
+//
+//}

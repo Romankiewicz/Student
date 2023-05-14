@@ -1,42 +1,68 @@
 package de.iav.studend.model;
 
+
 import java.util.Objects;
 
-public class Studend {
-    private String name;
-    private int id;
+public abstract class Student {
 
+    private String id;
+    private String name;
     private int age;
+    private boolean isActiveStudent;
+
+
+    public Student() {
+    }
+
+    public Student(String id, String name, int age, boolean isActiveStudent) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.isActiveStudent = isActiveStudent;
+    }
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public Studend(String name, int id, int age) {
-        this.name = name;
-        this.id = id;
-    }
-
-    public Studend(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Studend(int id) {
-        this.id = id;
+    public int getAge() {
+        return age;
     }
 
-    public Studend() {}
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean isActiveStudent() {
+        return isActiveStudent;
+    }
+
+    public void setActiveStudent(boolean activeStudent) {
+        isActiveStudent = activeStudent;
+    }
+
+
 
     @Override
     public String toString() {
-        return "Students{" +
-                "name='" + name + '\'' +
-                ", id=" + id + '\'' +
-                ", age=" +age +'\'' +
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", isActiveStudent=" + isActiveStudent +
                 '}';
     }
 
@@ -44,12 +70,12 @@ public class Studend {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Studend studend = (Studend) o;
-        return id == studend.id && Objects.equals(name, studend.name);
+        Student student = (Student) o;
+        return age == student.age && isActiveStudent == student.isActiveStudent && Objects.equals(id, student.id) && Objects.equals(name, student.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, id);
+        return Objects.hash(id, name, age, isActiveStudent);
     }
 }

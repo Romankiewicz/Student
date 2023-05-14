@@ -1,6 +1,6 @@
-package de.iav;
+package de.iav.simpsons;
 
-import de.iav.model.Simpson;
+import de.iav.simpsons.model.Simpson;
 
 public class Main {
 
