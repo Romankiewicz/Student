@@ -1,6 +1,7 @@
 package de.iav.studend;
 
 import de.iav.studend.model.*;
+import de.iav.studend.model.animals.Pet;
 
 public class Main {
 
@@ -36,6 +37,9 @@ public class Main {
         morpheus.setName("Morpheus");
         morpheus.setAdress("Zion");
 
+        Pet cat = new Pet("Tom");
+
+
 
 
 
@@ -44,6 +48,7 @@ public class Main {
         System.out.println(nathan);
         System.out.println(neo);
         System.out.println(morpheus);
+        System.out.println(cat);
 
     }
 }
